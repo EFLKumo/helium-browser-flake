@@ -147,9 +147,9 @@
           cp -rv ./ "$libExecPath/"
 
           mkdir -p $out/bin
-          wrapQtApp "$libExecPath/chrome-wrapper" \
+          wrapQtApp "$libExecPath/chrome" \
             --prefix LD_LIBRARY_PATH : "$rpath"
-          ln -s "$libExecPath/chrome-wrapper" "$out/bin/${pname}"
+          ln -s "$libExecPath/chrome" "$out/bin/${pname}"
 
           runHook postInstall
         '';
